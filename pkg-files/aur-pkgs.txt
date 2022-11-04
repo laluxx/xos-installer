@@ -1,0 +1,5 @@
+zsh-theme-powerlevel10k-git
+oh-my-zsh-git
+--END OF MINIMAL INSTALL--
+papirus-icon-theme
+picom-git
