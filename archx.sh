@@ -39,7 +39,7 @@ echo -nE "
     mkdir -p /mnt/home/$USERNAME/.logs/
     cp -v *.log /mnt/home/$USERNAME/.logs/
 
-    ./home/$USERNAME/ArchX/pkg-files/${DESKTOP_ENV}.sh
+    ./home/$USERNAME/xos-intaller/pkg-files/xos.sh
     
 echo -nE "
                __________ __          __          __     
