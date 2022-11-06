@@ -39,7 +39,6 @@ echo -nE "
     mkdir -p /mnt/home/$USERNAME/.logs/
     cp -v *.log /mnt/home/$USERNAME/.logs/
 
-    ./home/$USERNAME/xos-installer/pkg-files/xos.sh
     
 echo -nE "
                __________ __          __          __     

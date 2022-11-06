@@ -28,7 +28,6 @@ awesome-terminal-fonts
 rmtrash
 neofetch
 meson
-colorls
 
 --END OF MINIMAL INSTALL--
 gstreamer

@@ -125,6 +125,8 @@ sed -i 's/^%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL:ALL) NOPASSWD: A
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
+./home/$USERNAME/xos-installer/pkg-files/xos.sh
+
 rm -r $HOME/xos-installer
 rm -r /home/$USERNAME/xos-installer
 rm -r /home/$USERNAME/yay

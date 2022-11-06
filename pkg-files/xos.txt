@@ -29,7 +29,6 @@ xfce4-settings
 pulseaudio-alsa
 alsa-firmware
 alsa-lib
-
 libx11
 libx11-xcb
 libXext
@@ -49,7 +48,7 @@ xcb-glx
 pixman
 libev
 uthash
-
+libconfig
 --END OF MINIMAL INSTALL--
 
 
