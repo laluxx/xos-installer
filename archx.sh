@@ -27,9 +27,10 @@ echo -nE "
                 Scripts are in directory named xos-installer
 
 "
-    ./home/$USERNAME/xos-installer/pkg-files/xos.sh
+    
     ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log
       source $CONFIGS_DIR/setup.conf
+    ./home/$USERNAME/xos-installer/pkg-files/xos.sh
     ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log
     ( arch-chroot /mnt $HOME/xos-installer/scripts/1-setup.sh )|& tee 1-setup.log
     if [[ ! $DESKTOP_ENV == arch ]]; then
@@ -39,8 +40,6 @@ echo -nE "
     mkdir -p /mnt/home/$USERNAME/.logs/
     cp -v *.log /mnt/home/$USERNAME/.logs/
 
-    ./home/$USERNAME/xos-installer/pkg-files/xos.sh
-    
 echo -nE "
                __________ __          __          __     
                \_  _____/|__|  ____  |__|  ______|  |__  
