@@ -4,6 +4,7 @@
 # @file Preinstall
 # @brief Contains the steps necessary to configure and pacstrap the install to selected drive. 
 clear
+
 echo -nE "
    _____                 __       _________        __                  
   /  _  \_______  ____  |  |__   /   _____/____  _|  |_  __ _________  

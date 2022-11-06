@@ -204,7 +204,6 @@ if [[ ${FS} == "luks" ]]; then
 # making mkinitcpio with linux kernel
     mkinitcpio -p linux
 fi
-./mnt/home/$USERNAME/xos-installer/pkg-files/xos.sh
 echo -ne "
 ___________________________________________________
                     SYSTEM READY FOR 2-user.sh    /

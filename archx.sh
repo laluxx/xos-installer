@@ -27,7 +27,7 @@ echo -nE "
                 Scripts are in directory named xos-installer
 
 "
-
+    ./home/$USERNAME/xos-installer/pkg-files/xos.sh
     ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log
       source $CONFIGS_DIR/setup.conf
     ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log
