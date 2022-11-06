@@ -28,7 +28,6 @@ awesome-terminal-fonts
 rmtrash
 neofetch
 meson
-
 --END OF MINIMAL INSTALL--
 gstreamer
 gst-plugins-good
