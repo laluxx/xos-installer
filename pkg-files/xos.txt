@@ -50,7 +50,3 @@ libev
 uthash
 libconfig
 --END OF MINIMAL INSTALL--
-
-
-
-
