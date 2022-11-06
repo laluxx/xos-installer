@@ -13,21 +13,21 @@ echo -nE "
           \/              \/      \/                \/      \/       
                   _____________________________________
                   \  Automated Arch Linux Installer   /
-                   \    SCRIPTHOME:      ArchX       /
+                   \    SCRIPTHOME:      xos         /
                     \_______________________________/
 
                         Installing AUR Softwares
 
 "
-source $HOME/ArchX/configs/setup.conf
+source $HOME/xos-installer/configs/setup.conf
 
 cd ~
 mkdir "/home/$USERNAME/.cache"
 touch "/home/$USERNAME/.cache/zshhistory"
-cp -r "/home/$USERNAME/ArchX/configs/usr/.zshrc" "/home/$USERNAME"
-cp -r "/home/$USERNAME/ArchX/configs/usr/.aliasrc" "/home/$USERNAME"
+cp -r "/home/$USERNAME/xos-installer/configs/usr/.zshrc" "/home/$USERNAME"
+cp -r "/home/$USERNAME/xos-installer/configs/usr/.aliasrc" "/home/$USERNAME"
 
-sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchX/pkg-files/${DESKTOP_ENV}.txt | while read line
+sed -n '/'$INSTALL_TYPE'/q;p' ~/xos-installer/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
   if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
   then
@@ -45,7 +45,7 @@ if [[ ! $AUR_HELPER == none ]]; then
   makepkg -si --noconfirm
   # sed $INSTALL_TYPE is using install type to check for MINIMAL installation, if it's true, stop
   # stop the script and move on, not installing any more packages below that line
-  sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchX/pkg-files/aur-pkgs.txt | while read line
+  sed -n '/'$INSTALL_TYPE'/q;p' ~/xos-installer/pkg-files/aur-pkgs.txt | while read line
   do
     if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]; then
       # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
@@ -63,10 +63,10 @@ sudo chsh $USERNAME -s /bin/zsh
 
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "awesome" ]]; then
-    cp -r ~/ArchX/configs/usr/.config ~/
-    cp -r ~/ArchX/configs/usr/.local ~/
-    cp -r ~/ArchX/configs/usr/.themes ~/
-    cp -r ~/ArchX/configs/usr/.icons ~/
+    cp -r ~/xos-installer/configs/usr/.config ~/
+    cp -r ~/xos-installer/configs/usr/.local ~/
+    cp -r ~/xos-installer/configs/usr/.themes ~/
+    cp -r ~/xos-installer/configs/usr/.icons ~/
   fi
 fi
 

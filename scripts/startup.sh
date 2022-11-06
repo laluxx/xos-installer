@@ -184,7 +184,7 @@ select_option() {
 
     return $(( $active_col + $active_row * $colmax ))
 }
-# @description Displays ArchX logo
+# @description Displays xos logo
 # @noargs
 logo () {
 # This will be shown on every set as user is progressing

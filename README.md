@@ -1,4 +1,4 @@
-# xos-installer
+# ArchX
 
 ### Create Arch Iso
 
@@ -8,9 +8,9 @@ Download [ArchIso](<https://archlinux.org/download/>) and put on a USB drive wit
 
 ```
 pacman -Sy --needed git
-git clone https://github.com/laluxx/xos-installer
-chmod -R +x xos-installer
-cd xos-installer
+git clone https://github.com/X3ric/ArchX
+chmod -R +x ArchX
+cd ArchX
 ./archx.sh
 ```
 

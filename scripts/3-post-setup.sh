@@ -13,14 +13,14 @@ echo -ne "
              \/       \/                          \/     \/     \/ 
                   _____________________________________
                   \  Automated Arch Linux Installer   /
-                   \    SCRIPTHOME:     ArchX        /
+                   \    SCRIPTHOME:     xos          /
                     \_______________________________/
 
                      Final Setup and Configurations
                    GRUB EFI Bootloader Install & Check
 
 "
-source ${HOME}/ArchX/configs/setup.conf
+source ${HOME}/xos-installer/configs/setup.conf
 
 if [[ -d "/sys/firmware/efi" ]]; then
     grub-install --efi-directory=/boot ${DISK}
@@ -44,7 +44,7 @@ THEME_NAME="PolyDark"
 echo -e "Creating the theme directory..."
 mkdir -p "${THEME_DIR}/${THEME_NAME}"
 echo -e "Copying the theme..."
-cd ${HOME}/ArchX
+cd ${HOME}/xos-installer
 cp -a configs${THEME_DIR}/${THEME_NAME}/* ${THEME_DIR}/${THEME_NAME}
 echo -e "Backing up Grub config..."
 cp -an /etc/default/grub /etc/default/grub.bak
@@ -102,11 +102,11 @@ __________________________________________________/
 
 "
 
-SNAPPER_CONF="$HOME/ArchX/configs/etc/snapper/configs/root"
+SNAPPER_CONF="$HOME/xos-installer/configs/etc/snapper/configs/root"
 mkdir -p /etc/snapper/configs/
 cp -rfv ${SNAPPER_CONF} /etc/snapper/configs/
 
-SNAPPER_CONF_D="$HOME/ArchX/configs/etc/conf.d/snapper"
+SNAPPER_CONF_D="$HOME/xos-installer/configs/etc/conf.d/snapper"
 mkdir -p /etc/conf.d/
 cp -rfv ${SNAPPER_CONF_D} /etc/conf.d/
 
@@ -125,8 +125,8 @@ sed -i 's/^%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL:ALL) NOPASSWD: A
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 
-rm -r $HOME/ArchX
-rm -r /home/$USERNAME/ArchX
+rm -r $HOME/xos-installer
+rm -r /home/$USERNAME/xos-installer
 rm -r /home/$USERNAME/yay
 
 # Replace in the same state

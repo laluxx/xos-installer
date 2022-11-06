@@ -51,3 +51,17 @@ sudo make clan install
 cd ..
 mv st-0.9/ ~/.config//suckless
 
+
+
+
+echo -nE "
+
+█▀█ █ █▀▀ █▀█ █▀▄▀█
+█▀▀ █ █▄▄ █▄█ █░▀░█
+"
+
+git clone https://github.com/FT-Labs/picom.git
+cd picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build

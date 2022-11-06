@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# @file ArchX
+# @file xos-intaller 
 # @brief Entrance script that launches children scripts for each phase of installation.
 # Find the name of the folder the scripts are in
 set -a
@@ -21,21 +21,21 @@ echo -nE "
  \____|__  / |__|    \___  >|___|  / \____|__  /\___  >|___|  /|____/ 
          \/              \/      \/          \/     \/      \/        
                   _____________________________________
-                  \  Automated Arch Linux Installer   /
+                  \      Automated xos installer      /
                    \_________________________________/
 
-                Scripts are in directory named ArchX
+                Scripts are in directory named xos-intaller
 
 "
 
     ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log
       source $CONFIGS_DIR/setup.conf
     ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log
-    ( arch-chroot /mnt $HOME/ArchX/scripts/1-setup.sh )|& tee 1-setup.log
+    ( arch-chroot /mnt $HOME/xos-intaller/scripts/1-setup.sh )|& tee 1-setup.log
     if [[ ! $DESKTOP_ENV == server ]]; then
-      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/ArchX/scripts/2-user.sh )|& tee 2-user.log
+      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/xos-intaller/scripts/2-user.sh )|& tee 2-user.log
     fi
-    ( arch-chroot /mnt $HOME/ArchX/scripts/3-post-setup.sh )|& tee 3-post-setup.log
+    ( arch-chroot /mnt $HOME/xos-intaller/scripts/3-post-setup.sh )|& tee 3-post-setup.log
     mkdir -p /mnt/home/$USERNAME/.logs/
     cp -v *.log /mnt/home/$USERNAME/.logs/
 
@@ -49,7 +49,7 @@ echo -nE "
                 \__  /   |__||___|  /|__|/____  >|___|  /
                    \/             \/          \/      \/ 
                   _____________________________________
-                  \  Automated Arch Linux Installer   /
+                  \      Automated xos installer      /
                    \_________________________________/
 
               Done - Please Eject Install Media and Run reboot

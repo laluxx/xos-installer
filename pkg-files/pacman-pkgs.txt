@@ -21,13 +21,15 @@ alsa-plugins
 alsa-utils
 fonts-powerline
 zsh
-thefuck
 zsh-syntax-highlighting
 zsh-autosuggestions
 autojump
 awesome-terminal-fonts
 rmtrash
 neofetch
+meson
+colorls
+
 --END OF MINIMAL INSTALL--
 gstreamer
 gst-plugins-good
