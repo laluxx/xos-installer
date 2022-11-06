@@ -30,6 +30,26 @@ pulseaudio-alsa
 alsa-firmware
 alsa-lib
 
+libx11
+libx11-xcb
+libXext
+xproto
+xcb
+xcb-damage
+xcb-xfiles
+xcb-shape
+xcb-renderutil
+xcb-render
+xcb-randr
+xcb-composite
+xcb-image
+xcb-present
+xcb-xinerama
+xcb-glx
+pixman
+libev
+uthash
+
 --END OF MINIMAL INSTALL--
 
 

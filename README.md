@@ -1,4 +1,4 @@
-# ArchX
+# xos-installer 
 
 ### Create Arch Iso
 
@@ -8,9 +8,9 @@ Download [ArchIso](<https://archlinux.org/download/>) and put on a USB drive wit
 
 ```
 pacman -Sy --needed git
-git clone https://github.com/X3ric/ArchX
-chmod -R +x ArchX
-cd ArchX
+git clone https://github.com/laluxx/xos-installer
+chmod -R +x xos-installer 
+cd xos-installer 
 ./archx.sh
 ```
 
@@ -38,9 +38,7 @@ If says **Soft blocked: yes**, then run `rfkill unblock wifi`
 
 ## Desktopenv
 
-**Arch**: is no desktop envoiriment edition.
-
-**Awesome**: is arch with [awesome wm](https://awesomewm.org/).
+**Arch**: base arch for chads only.
 
 ## To view packages install go in pkg-files/
 
