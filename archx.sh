@@ -33,7 +33,7 @@ echo -nE "
     ./home/$USERNAME/xos-installer/pkg-files/xos.sh
     ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log
     ( arch-chroot /mnt $HOME/xos-installer/scripts/1-setup.sh )|& tee 1-setup.log
-    if [[ ! $DESKTOP_ENV == arch ]]; then
+    if [[ ! $DESKTOP_ENV == server ]]; then
       ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/xos-installer/scripts/2-user.sh )|& tee 2-user.log
     fi
     ( arch-chroot /mnt $HOME/xos-installer/scripts/3-post-setup.sh )|& tee 3-post-setup.log

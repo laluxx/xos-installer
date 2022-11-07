@@ -130,12 +130,12 @@ rm -r $HOME/xos-installer
 rm -r /home/$USERNAME/xos-installer
 rm -r /home/$USERNAME/yay
 
-cd /home/$USERNAME/
-git clone https://github.com/laluxx/xos-installer
-chmod -R +x xos-installer
-cd xos-installer/pkg-files
-./xos.sh
-rm -r /home/$USERNAME/xos-installer
+# cd /home/$USERNAME/
+# git clone https://github.com/laluxx/xos-installer
+# chmod -R +x xos-installer
+# cd xos-installer/pkg-files
+# ./xos.sh
+# rm -r /home/$USERNAME/xos-installer
  
 
 # Replace in the same state
